@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farewell Invitation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container ">
+    <h3>||आमन्त्रणपत्रम्||</h3>
+    <h3>YOU ARE CORDIALLY INVITED TO ATTEND</h3>
+    <h1 class="highlight">farewell fiesta 2025</h1>
+    <div class="sanskrit">अंत्यवेला</div>
+    <p class="quote">"The Last Goodbye and Begining of Forever"</p>
+
+    <div class="uni">
+      <p>उत्तरांचल विश्वविद्यालय</p>
+      <p>UTTARANCHAL UNIVERSITY</p>
+      <p>उत्तरांचल औषधि विज्ञान संस्थान</p>
+      <p>UTTARANCHAL INSTITUTE OF PHARMACEUTICAL SCIENCES</p>
+      <br>
+      <p>चिरागों को महफूज़ रखना आंखों में बड़ी दूर तक अंधेरी रात होगी
+        मुसाफिर हैं हम भी, मुसाफिर हो तुम भी फिर किसी मोड़ पर मुलाकात होगी</p>
+        <p>अंत्यवेला - The Beginning of Forever</p>
+    </div>
+
+    <div class="cap-icon">🎓</div>
+
+    <p class="message">
+      To the ones who led the way—this one’s for you! Join us as we celebrate the
+      incredible journey of our seniors and wish them the very best for their future endeavors.
+    </p>
+
+    <div class="activities">dance / music / lunch</div>
+
+    <div class="countdown">
+      <div><span id="days">00</span><br>Days</div>
+      <div><span id="hours">00</span><br>Hours</div>
+      <div><span id="minutes">00</span><br>Minutes</div>
+      <div><span id="seconds">00</span><br>Seconds</div>
+     
+    </div>
+    <br>
+    <div class="telegram-wrapper">
+      <a class="telegram" href="https://t.me/farewell2025uips">Collect ur pics</a>
+    </div>
+    
+  </div>
+
+  <script>
+    const countdown = () => {
+      const endDate = new Date("April 29, 2025 10:00:00").getTime();
+      const now = new Date().getTime();
+      const diff = endDate - now;
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+      }
+    };
+
+    setInterval(countdown, 1000);
+  </script>
+</body>
+</html>
